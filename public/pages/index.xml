@@ -13,9 +13,8 @@
       
       <guid>http://localhost:1313/pages/about/</guid>
       
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
-https://github.com/yuin/goldmark https://github.</description>
+      <description>It has taken some time to get me interested in how computers work and untill I got my first experiences in this wonderful land. Let&amp;rsquo;s take a look.
+My story Ever since I remember, I always got interested in how things work. I always have been fullfilled with curiosity and wonders about how the world works. But it&amp;rsquo;s only at age six that I was immersed in the world of boop-beeps.</description>
       
     </item>
     

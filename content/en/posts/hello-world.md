@@ -1,7 +1,7 @@
 +++
 title = 'Hello World'
 date = 2024-08-23T12:12:46+02:00
-draft = true
+draft = false
 +++
 
 I recently started to consider the option of having a tiny blog where I could be able to tell stories, and talk about what I want. So here we are!
