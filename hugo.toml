@@ -42,7 +42,10 @@ theme = "hugo-blog-awesome"
     noClasses = false
   [markup.goldmark.renderer]
     unsafe = true
-	
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
 
 
 ############################## English language ################################
@@ -67,7 +70,7 @@ theme = "hugo-blog-awesome"
     weight = 20
   [[Languages.en-gb.menu.main]]
     pageRef="about"
-    name = 'About'
+    name = 'About Me'
     url = '/about/'
     weight = 30
 
