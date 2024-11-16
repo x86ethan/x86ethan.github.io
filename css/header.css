@@ -1,0 +1,76 @@
+#section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: var(--background-color);
+
+}
+
+#main-pic {
+    width: 500px;
+
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+    transition: all 0.2s ease-in-out;
+}
+
+#main-pic:hover {
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.25));
+    transform: translateY(-5px) scale(1.01);
+}
+
+#main-pic:active {
+    transform: scale(1);
+}
+
+#headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fancy-title {
+    font-family: "Imperial Script", cursive;
+    font-weight: 500;
+    font-size: 10em;
+    color: var(--text-color);
+    line-height: 100%;
+    margin: 0; padding: 0;
+}
+
+#main-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 8em;
+    line-height: 90%;
+    margin: 0; padding: 0;
+    color: var(--text-color);
+}
+
+#main-title > strong {
+    color: var(--strong-color);
+}
+
+#button-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}   
+
+#button-hire-me::after {
+    content: "📨";
+}
+
+#button-see-project::after {
+    content: "↓";
+}
+
+
+
+.protector {
+    display: inline-block;
+}
+
+
