@@ -1,7 +1,20 @@
 html, body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    
 }
+/* Hide scrollbar */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
 
 body {
 
@@ -29,6 +42,12 @@ body {
     justify-content: center;
     align-items: center;
 
+    transition: width .5s ease;
+
+}
+
+#section-information.projects-expanded {
+    width: 33%;
 }
 
 .information-section-content {
@@ -51,12 +70,16 @@ body {
     height: auto;
 }
 
-.infomration-text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.information-text {
 
-    width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    font-size: 20px;
+
+
 }
 
 .information-title {
@@ -64,8 +87,13 @@ body {
     letter-spacing: -6%;
     font-size: 48px;
     color: var(--color-3);
+    font-weight: 900;
 
-    width: fit-content;
+    padding: 0; 
+    margin: 0;
+
+
+    white-space: nowrap;
 }
 
 .information-subtitle {
@@ -73,8 +101,253 @@ body {
     font-weight: 400;
     color: var(--color-3);
     font-size: 20px;
+
+
+    padding: 0;
+    margin: 0;
+
+    height: auto; 
+    width: 0;
+    min-width: 100%; 
+    
+
+}
+
+.social-icons {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+
+}
+
+separator {
+    display: block;
+}
+
+.vertical-separator {
+    background-color: var(--color-3);
+    width: 2px;
+    height: 30%;
+    border-radius: 2px;
+}
+
+.social-icon path {
+    fill: var(--color-3);
+}
+
+.button {
+
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    gap: 7.5px; 
+    align-items: center;
+
+    background-color: var(--color-3);
+    color: var(--color-1);
+
+    box-sizing: border-box;
+
+    font-family: "Space Grotesk", monospace;
+    text-decoration: none; 
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px;  
+
+    box-shadow: 5px 5px var(--color-2);
+    border: 2px solid var(--color-3);
+
+
+    transition: all .3s ease;
+}
+
+.button svg path {
+    transition: all .3s ease;
+    fill: var(--color-1);
+}
+
+.button:hover { 
+    color: var(--color-3);
+    background-color: var(--color-1);
+    transform: scale(102%);
+    box-shadow: 7px 7px var(--color-2);
+
+    transition: transform .1s ease, all .3s ease;
+   
+}
+
+.button:hover svg path {
+    fill: var(--color-3);
+}
+
+.button:active {
+    transform: scale(98%);
+}
+
+
+#download-cv-button {
+    width: 100%;
+    
 }
 
 #section-about {
     width: 33%;
+
+    background-color: var(--color-2);
+    height: 100vh;
+    transition: width .5s ease;
+}
+
+#section-about.projects-expanded {
+
+    width: 1%;
+
+}
+
+#section-about .section-content, #section-about .next-section {
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+
+#section-about.projects-expanded .section-content, #section-about.projects-expanded .next-section {
+    opacity: 0;
+}
+
+.section-content {
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+
+    box-sizing: border-box; 
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.next-section {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+
+.next-section-button {
+
+    font-size: 24px; 
+    font-family: "Space Grotesk", monospace;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+
+.next-section-button:active {
+    transition: transform .1s ease;
+    transform: scale(95%);
+}
+
+#section-about .next-section-button {
+    color: var(--color-3);
+}
+
+#section-about .next-section-button:hover {
+    transform: translateX(5px);
+}
+
+.about-heading {
+    font-family: "Space Grotesk", monospace;
+    font-weight: 900;
+    color: var(--color-3);
+    font-size: 32px;
+    padding: 0; margin: 0;
+}
+
+.about-text {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 20px;
+    color: var(--color-3);   
+    padding: 0;
+    margin: 0;
+}
+
+separator.horizontal-separator {
+    background-color: var(--color-3);
+    opacity: .5;
+    min-height: 1px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.tools-heading {
+    font-family: "Space Grotesk", monospace;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--color-3);
+
+    padding: 0;
+    margin: 0;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tool-name {
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 500;
+    color: var(--color-3);
+    letter-spacing: -4%;
+
+    padding: 0;
+    margin: 0;
+}
+
+.tool-icon path {
+    fill: var(--color-3);
+}
+
+#section-projects {
+    background-color: var(--color-3);
+    width: 1%;
+    transition: width .5s ease;
+}
+
+#section-projects.projects-expanded {
+    width: 66%;
+}
+
+#section-projects .section-content, #section-projects .next-section {
+    opacity: 0;
+}
+
+#section-projects.projects-expanded .section-content, #section-projects.projects-expanded .next-section {
+    opacity: 1;
+}
+#section-projects .next-section {
+    justify-content: flex-start;
+}
+
+#section-projects * {
+    color: var(--color-2);
 }
