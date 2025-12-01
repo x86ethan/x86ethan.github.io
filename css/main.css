@@ -388,9 +388,6 @@ separator.horizontal-separator {
 
 .projects-column {
 
-    background-color: red;
-    border: 1px solid blue;
-
     min-height: 100%; 
     width: 100%;
 }
