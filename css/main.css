@@ -346,8 +346,51 @@ separator.horizontal-separator {
 }
 #section-projects .next-section {
     justify-content: flex-start;
+    transition: transform .5s ease;
+    border-top: 2px solid var(--color-2);
+}
+
+#section-projects .next-section span:hover {
+    transform: translate(-5px);
 }
 
 #section-projects * {
     color: var(--color-2);
+}
+
+#section-projects .section-content {
+    padding-bottom: 0;
+}
+
+.section-projects-header {
+
+    font-size: 42px; 
+    font-family: "Space Grotesk", monospace;
+    font-weight: 900;
+    letter-spacing: -5%;
+
+    padding: 0; 
+    margin: 0;
+
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+.projects-columns {
+    display: flex; 
+    flex-direction: row;
+    flex-grow: 1;
+
+    height: 100%;
+    width: 100%;
+}
+
+.projects-column {
+
+    background-color: red;
+    border: 1px solid blue;
+
+    min-height: 100%; 
+    width: 100%;
 }
