@@ -1,0 +1,26 @@
+#section-about h2 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 28px;
+}
+
+li {
+    font-size: 22px;
+}
+
+#section-abobut li::marker {
+    color: var(--color-primary);
+}
+
+#section-about ul {
+    list-style-type:square;
+
+}
+
+#section-about div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
