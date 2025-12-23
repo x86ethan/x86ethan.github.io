@@ -1,0 +1,70 @@
+#section-header article {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 35px;
+    height: fit-content;
+}
+
+#profile-picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+#profile-picture-container {
+    height: 100%;
+    width: 300px;
+}
+
+#header-information h1 {
+    font-family: "Gravitas One";
+    font-size: 68px;
+    font-weight: 900;
+    letter-spacing: -11%;
+    line-height: 90%;
+
+    margin: 0;
+    padding: 0;
+    color: #7B3C0F;
+}
+
+#header-information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+#header-information hr {
+    border: 0px solid transparent; 
+    border-top: 1px solid black;
+
+    height: 1px;
+    width: 100%;
+
+    margin: 0; 
+    padding: 0;
+}
+
+#header-information p {
+    font-size: 22px;
+    letter-spacing: -8%;
+    line-height: 109%;
+    font-weight: 300;
+    text-align: left;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+strong {
+    font-weight: 600; 
+    color: #7B3C0F;
+}
