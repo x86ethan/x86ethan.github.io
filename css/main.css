@@ -171,3 +171,46 @@ section p {
     padding: 0;
     width: 100%;
 }
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tabs div {
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+
+    padding-top: 5px; 
+    padding-bottom: 5px;
+    
+    font-weight: 400;
+
+    position: relative;
+    color: var(--color-primary);
+
+    transition: color .2s ease, background-color .2s ease;
+
+}
+
+.tabs div:not(.tab-active) {
+    cursor: pointer;
+}
+
+.tabs div:not(.tab-active):hover {
+    background-color: #fafafa;
+}
+
+.tabs .tab-active {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+
