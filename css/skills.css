@@ -1,0 +1,57 @@
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-section h2 {
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.skills-expo {
+    display: table;
+    gap: 15px;
+    border-spacing: 10px;
+}
+
+.skills-col {
+    display: table-row;
+    gap: 10px;
+}
+
+.skill-cell {
+    display: table-cell;
+    width: 50%;
+    gap: 15px;
+    padding: 10px 0px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.skill img {
+    width: 42px;
+    height: 42px;
+} 
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill h3 {
+    margin: 0; 
+    padding: 0;
+    color: var(--color-primary);
+}
+
+.skill p {
+    font-size: 16px;
+}
