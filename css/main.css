@@ -30,7 +30,8 @@ body {
 
     padding: 0px 90px;
 
-    background-color: #F2EFE5;
+    background: linear-gradient(180deg, rgba(242,239,229,1) 0%, rgba(242,239,229,0) 100%), #F2EFE5;
+    color: #333;
     
 }
 
@@ -100,6 +101,7 @@ section h1.main-title {
     font-weight: normal;
     letter-spacing: -5%;
     line-height: 90%;
+    text-shadow: 2px 2px 0px var(--color-primary-light);
 
     margin: 0;
     padding: 0;
