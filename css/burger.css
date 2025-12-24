@@ -122,7 +122,6 @@ header {
         font-size: 18px;
         text-align: left;
         width: 100%; /* Ensure wide buttons */
-        max-width: 250px;
         box-sizing: border-box;
         transition: background-color 0.2s ease, transform 0.2s ease, border-color .2s ease;
 
