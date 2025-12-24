@@ -51,19 +51,6 @@ header {
         display: flex;
     }
 
-    #close-menu {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 40px; /* Larger close button */
-        color: black;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 10px; /* Larger touch target */
-        z-index: 101;
-    }
-
     #burger-menu.active span:nth-child(1) {
         transform: rotate(45deg) translate(7px, 7px);
     }
