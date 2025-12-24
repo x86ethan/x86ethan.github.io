@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/header.css" type="text/css">
     <link rel="stylesheet" href="css/about.css" type="text/css">
     <link rel="stylesheet" href="css/skills.css" type="text/css">
+    <link rel="stylesheet" href="css/projects.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/burger.css" type="text/css">
 </head>
 <body>
 
@@ -171,9 +174,40 @@
                 <h1 class="main-title">Cas<br>d'études</h1>
                 <hr/>
 
-                <div class="tabs">
+                <div class="tabs" id="projects-tab">
                     <div class="tab-active">Déploiement</div>
                     <div>Développement</div>
+                </div>
+
+                <div class="projects-expo" id="deployment-projects">
+                    <a target="_blank" href="https://github.com/x86ethan/Installation-Services-R-seau" class="project">
+                        <img src="img/projects/gitea.png" alt="">
+                        <h3>Serveur Gitea</h3>
+                        <p>Installation d'un serveur Gitea virtualisé dans le cadre d'un projet de BUT1.</p>
+                    </a>
+                </div>
+
+                <div class="projects-expo" id="development-projects">
+                    <a href="https://github.com/x86ethan/SAE-RdB-Website" target="_blank" class="project">
+                        <img src="img/projects/apple-transports.png" alt="">
+                        <h3>Apple Transports</h3>
+                        <p>Une application de covoiturage fictionnelle basée sur la philosophie de design d'Apple.</p>
+                    </a>
+                    <a class="project">
+                        <img src="img/projects/lang-tool.png" alt="">
+                        <h3>Outil de décision pour séjours linguistiques</h3>
+                        <p>Un outil d'associations pour la constitution de groupes pour séjours linguistiques.</p>
+                    </a>
+                    <a class="project">
+                        <img src="img/projects/infopoly.png" alt="">
+                        <h3>Infopoly</h3>
+                        <p>Un jeu vidéo inspiré du célèbre jeu de plateau Monopoly, qui se déroule au sein du département Informatique de l'IUT de Lille.</p>
+                    </a>
+                    <a class="project">
+                        <img src="img/projects/squirrel.png" alt="">
+                        <h3>Squirrel</h3>
+                        <p>Un gestionnaire de paquets source-based pour une distribution Linux légère.</p>
+                    </a>
                 </div>
 
             </article>
@@ -186,7 +220,36 @@
 
     </div>
 
-    <nav>
+
+    <header>
+        <div id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav id="mobile-nav">
+        <div id="navigation-box">
+
+            <a href=#section-header class="nav-link-active">Accueil</a>
+            <a href=#section-about>À Propos</a>
+            <a href=#section-skillset>Compétences</a>
+            <a href=#section-projects>Projets</a>
+        
+        </div>
+
+        <hr/>
+        
+        <div id="homelab-box">
+            <div id="homelab-title"><div class="indicator-fine" id="homelab-indicator"></div><h2>Homelab</h2></div>
+            <a href="">Codeberg</a>
+            <a href="">Blog (post-mortems)</a>
+            <a href="">Wiki</a>
+        </div>
+    </nav>
+
+    <nav id="desktop-nav">
         <div id="navigation-box">
 
             <a href=#section-header class="nav-link-active">Accueil</a>
@@ -207,7 +270,10 @@
     </nav>
 
 
+
     <script src="scripts/tabs.js"></script>
+    <script src="scripts/scroll-nav.js"></script>
+    <script src="scripts/burger.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,25 @@
+@media (max-width: 850px) {
+    body {
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #section-header article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #profile-picture-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    section h1.main-title {
+        font-size: 48px;
+    }
+}

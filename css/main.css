@@ -3,13 +3,16 @@ html, body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     --color-primary: #7B3C0F;
     --color-secondary: #3B5611;
 } 
 
 body {
-    scroll-behavior: smooth;
 
     font-family: "Inter";
     font-weight: 400;
@@ -39,7 +42,7 @@ body {
 }
 
 
-nav {
+#desktop-nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +55,7 @@ nav {
     font-size: 22px;
 }
 
-nav hr {
+#desktop-nav hr {
     margin: 0;
     border: 0px solid transparent;
     border-top: 1px solid black;
@@ -65,7 +68,7 @@ nav hr {
     gap: 15px;
 }
 
-nav a {
+#desktop-nav a {
     text-decoration: none;
     font-weight: 300;
     color: black;
@@ -73,17 +76,17 @@ nav a {
     transition: font-weight .3s ease, color .3s ease, transform .3s ease;
 }
 
-nav a:hover {
+#desktop-nav a:hover {
     font-weight: 600;
     transform: translateX(-5px);
     color: var(--color-secondary);
 }
 
-nav a:active {
+#desktop-nav a:active {
     transform: scale(98%);
 }
 
-nav a.nav-link-active {
+#desktop-nav a.nav-link-active {
     font-weight: 600; 
     color: var(--color-secondary);
 }
@@ -176,7 +179,7 @@ section p {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
 }
 
@@ -186,7 +189,7 @@ section p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-grow: 1;
+    flex: 1;
 
     padding-top: 5px; 
     padding-bottom: 5px;
@@ -213,4 +216,6 @@ section p {
     background-color: var(--color-primary);
 }
 
-
+#mobile-nav {
+    display: none;
+}

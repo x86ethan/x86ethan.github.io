@@ -1,0 +1,48 @@
+.projects-expo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+}
+
+.project {
+    flex-grow: 1;
+    width: calc(45% - 10px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+    
+    transition: transform .3s ease, filter .3s ease;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.project img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.project p {
+    font-size: 16px;
+}
+
+.project h3 {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0; 
+    padding: 0;
+}
+
+.project:hover {
+    transform: scale(.95);
+    filter: brightness(1.05);
+}
+
+
+#development-projects {
+    display: none;
+}
