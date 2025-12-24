@@ -1,14 +1,7 @@
-#section-header {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 #section-header article {
     height: fit-content;
     flex-direction: row;
     align-items: stretch;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
 }
 
 #profile-picture {
