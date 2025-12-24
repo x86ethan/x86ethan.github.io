@@ -42,7 +42,7 @@ header {
         z-index: 99; /* Below header and burger icon */
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 20px; /* Add some padding */
         box-sizing: border-box;
     }
@@ -69,67 +69,81 @@ header {
         margin: 20px 0; /* Add margin for spacing */
         display: flex;
         flex-direction: column;
-        gap: 15px; /* Spacing between navigation items */
         width: 100%; /* Make list take full width */
-        max-width: 300px; /* Limit overall width for readability */
+        max-width: 500px; /* Limit overall width for readability */
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #ddd;
     }
 
     #navigation-list li {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     #navigation-list a {
         display: block; /* Make the whole area clickable */
         padding: 15px 20px; /* Large touch target */
         background-color: white;
-        border: 1px solid #ddd; /* Clear delimitation */
-        border-radius: 8px;
+
+        /* Borders */
+        border-top: .5px solid #ddd; border-bottom: .5px solid #ddd; 
         text-decoration: none;
         color: black;
         font-size: 20px; /* Readable font size */
         font-weight: 500;
-        transition: background-color 0.2s ease, transform 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease, border-color .2s ease;
     }
 
     #navigation-list a:hover,
     #navigation-list a:focus {
         background-color: var(--color-primary);
-        color: white;
-        transform: translateY(-2px);
+        border-color: var(--color-primary);
+        color: white !important;
         outline: none; /* Remove default focus outline */
     }
 
     #navigation-list a.nav-link-active {
-        background-color: var(--color-secondary);
-        color: white;
-        border-color: var(--color-secondary);
+        color: var(--color-secondary);
     }
 
     #homelab-box {
-        align-items: center;
+        align-items: stretch;
         margin-top: 30px; /* Spacing from navigation */
+        gap: 0px;
+        width: 100%;
     }
 
     #homelab-box a {
-        padding: 10px 15px; /* Standard button-like styling */
+        padding: 15px 20px; /* Standard button-like styling */
         background-color: white;
-        border: 1px solid #eee;
-        border-radius: 5px;
-        margin-top: 5px;
+        border-top: .5px solid #ddd; border-bottom: .5px solid #ddd;
+        border-left: 1px solid #ddd; border-right: 1px solid #ddd;
         font-size: 18px;
-        text-align: center;
+        text-align: left;
         width: 100%; /* Ensure wide buttons */
         max-width: 250px;
         box-sizing: border-box;
-        transition: background-color 0.2s ease, transform 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease, border-color .2s ease;
+
+        text-decoration: none; 
+        color: initial;
+        font-weight: 500;
+    }
+
+    #homelab-box a:first-of-type {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    #homelab-box a:last-of-type {
+        border-radius: 0px 0px 15px 15px;
     }
 
     #homelab-box a:hover,
     #homelab-box a:focus {
         background-color: var(--color-primary);
         color: white;
-        transform: translateY(-1px);
+        border-color: var(--color-primary);
         outline: none;
     }
 
