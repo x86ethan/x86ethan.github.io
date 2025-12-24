@@ -31,3 +31,21 @@
         display: none !important;
     }
 }
+
+@media (max-width: 600px) {
+    
+    .skills-col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .skill-cell {
+        width: 100%;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+}
