@@ -10,6 +10,7 @@ html {
 * {
     --color-primary: #7B3C0F;
     --color-secondary: #3B5611;
+    --color-background: #F2EFE5;
 } 
 
 body {
@@ -30,7 +31,7 @@ body {
 
     padding: 0px 90px;
 
-    background-color: #F2EFE5;
+    background-color: var(--color-background);
     
 }
 
