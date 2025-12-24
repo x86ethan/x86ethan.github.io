@@ -113,6 +113,10 @@ header {
         width: 100%;
     }
 
+    #homelab-title {
+        padding: 10px;
+    }
+
     #homelab-box a {
         padding: 15px 20px; /* Standard button-like styling */
         background-color: white;
