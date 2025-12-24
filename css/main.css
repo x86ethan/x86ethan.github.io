@@ -41,56 +41,6 @@ body {
     justify-content: flex-start;
 }
 
-
-#desktop-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 35px;
-
-    height: 100vh;
-
-    position: fixed; 
-    right: 90px;
-    font-size: 22px;
-}
-
-#desktop-nav hr {
-    margin: 0;
-    border: 0px solid transparent;
-    border-top: 1px solid black;
-}
-
-#navigation-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-}
-
-#desktop-nav a {
-    text-decoration: none;
-    font-weight: 300;
-    color: black;
-    
-    transition: font-weight .3s ease, color .3s ease, transform .3s ease;
-}
-
-#desktop-nav a:hover {
-    font-weight: 600;
-    transform: translateX(-5px);
-    color: var(--color-secondary);
-}
-
-#desktop-nav a:active {
-    transform: scale(98%);
-}
-
-#desktop-nav a.nav-link-active {
-    font-weight: 600; 
-    color: var(--color-secondary);
-}
-
 #homelab-box {
     display: flex;
     flex-direction: column;
@@ -214,8 +164,4 @@ section p {
 .tabs .tab-active {
     color: white;
     background-color: var(--color-primary);
-}
-
-#mobile-nav {
-    display: none;
 }

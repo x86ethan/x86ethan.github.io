@@ -10,7 +10,7 @@ header {
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 2;
+        z-index: 100; /* Higher z-index to be above the overlay */
     }
 
     #burger-menu {
@@ -18,6 +18,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        z-index: 101; /* Even higher z-index for the burger icon */
     }
 
     #burger-menu span {
@@ -36,15 +37,31 @@ header {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #F2EFE5;
-        z-index: 1;
+        background-color: rgba(242, 239, 229, 0.95); /* Slightly less transparent */
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        z-index: 99; /* Below header and burger icon */
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px; /* Add some padding */
+        box-sizing: border-box;
     }
 
     #mobile-nav.active {
         display: flex;
+    }
+
+    #close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 40px; /* Larger close button */
+        color: black;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 10px; /* Larger touch target */
+        z-index: 101;
     }
 
     #burger-menu.active span:nth-child(1) {
@@ -59,16 +76,80 @@ header {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    #navigation-box {
+    #navigation-list {
+        list-style: none; /* Remove bullet points */
+        padding: 0;
+        margin: 20px 0; /* Add margin for spacing */
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 15px; /* Spacing between navigation items */
+        width: 100%; /* Make list take full width */
+        max-width: 300px; /* Limit overall width for readability */
+    }
+
+    #navigation-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #navigation-list a {
+        display: block; /* Make the whole area clickable */
+        padding: 15px 20px; /* Large touch target */
+        background-color: white;
+        border: 1px solid #ddd; /* Clear delimitation */
+        border-radius: 8px;
+        text-decoration: none;
+        color: black;
+        font-size: 20px; /* Readable font size */
+        font-weight: 500;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    #navigation-list a:hover,
+    #navigation-list a:focus {
+        background-color: var(--color-primary);
+        color: white;
+        transform: translateY(-2px);
+        outline: none; /* Remove default focus outline */
+    }
+
+    #navigation-list a.nav-link-active {
+        background-color: var(--color-secondary);
+        color: white;
+        border-color: var(--color-secondary);
     }
 
     #homelab-box {
         align-items: center;
+        margin-top: 30px; /* Spacing from navigation */
     }
 
-    #desktop-nav {
-        display: none;
+    #homelab-box a {
+        padding: 10px 15px; /* Standard button-like styling */
+        background-color: white;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-size: 18px;
+        text-align: center;
+        width: 100%; /* Ensure wide buttons */
+        max-width: 250px;
+        box-sizing: border-box;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    #homelab-box a:hover,
+    #homelab-box a:focus {
+        background-color: var(--color-primary);
+        color: white;
+        transform: translateY(-1px);
+        outline: none;
+    }
+
+    /* Overlay effect for content when nav is active */
+    body.nav-active #content {
+        filter: blur(5px);
+        pointer-events: none; /* Prevent interaction with content behind */
+        transition: filter 0.3s ease;
     }
 }

@@ -1,11 +1,19 @@
+@media (max-width: 1200px) {
+    body {
+        padding: 0px 50px;
+    }
+    #content {
+        width: 100%;
+    }
+    nav {
+        display: none; /* Hide desktop nav on smaller screens */
+    }
+}
+
 @media (max-width: 850px) {
     body {
         flex-direction: column;
         padding: 0px 30px;
-    }
-
-    #content {
-        width: 100%;
     }
 
     #section-header article {
