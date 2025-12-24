@@ -1,0 +1,41 @@
+#desktop-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+
+    height: 100vh;
+
+    position: fixed; 
+    right: 90px;
+    font-size: 22px;
+}
+
+#desktop-nav hr {
+    margin: 0;
+    border: 0px solid transparent;
+    border-top: 1px solid black;
+}
+
+#desktop-nav .nav-link-active {
+    font-weight: 600; 
+    color: var(--color-secondary);
+}
+
+#desktop-nav a {
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    
+    transition: font-weight .3s ease, color .3s ease, transform .3s ease;
+}
+
+#desktop-nav a:hover {
+    font-weight: 600;
+    color: var(--color-secondary);
+    transform: translateX(-5px);
+}
+
+#desktop-nav a:active {
+    transform: scale(98%);
+}
