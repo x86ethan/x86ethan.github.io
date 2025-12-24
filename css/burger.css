@@ -159,4 +159,17 @@ header {
         pointer-events: none; /* Prevent interaction with content behind */
         transition: filter 0.3s ease;
     }
+
+    nav .btn {
+        
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 0px;
+        text-decoration: none;
+
+    }
+
+    nav .btn:hover {
+        transform: scale(1);
+    }
 }
