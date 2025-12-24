@@ -10,7 +10,7 @@ header {
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 2;
+        z-index: 100; /* Higher z-index to be above the overlay */
     }
 
     #burger-menu {
@@ -18,6 +18,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        z-index: 101; /* Even higher z-index for the burger icon */
     }
 
     #burger-menu span {
@@ -37,10 +38,12 @@ header {
         width: 100vw;
         height: 100vh;
         background-color: #F2EFE5;
-        z-index: 1;
+        z-index: 99; /* Below header and burger icon */
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        padding: 20px; /* Add some padding */
+        box-sizing: border-box;
     }
 
     #mobile-nav.active {
@@ -59,12 +62,97 @@ header {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    #navigation-box {
+    #navigation-list {
+        list-style: none; /* Remove bullet points */
+        padding: 0;
+        margin: 20px 0; /* Add margin for spacing */
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 100%; /* Make list take full width */ /* Limit overall width for readability */
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #navigation-list li {
+        width: 100%;
+        text-align: left;
+    }
+
+    #navigation-list a {
+        display: block; /* Make the whole area clickable */
+        padding: 15px 20px; /* Large touch target */
+        background-color: white;
+
+        /* Borders */
+        border-top: .5px solid #ddd; border-bottom: .5px solid #ddd; 
+        text-decoration: none;
+        color: #333;
+        font-size: 20px; /* Readable font size */
+        font-weight: 500;
+        transition: background-color 0.2s ease, transform 0.2s ease, border-color .2s ease;
+    }
+
+    #navigation-list a:hover,
+    #navigation-list a:focus {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        color: white !important;
+        outline: none; /* Remove default focus outline */
+    }
+
+    #navigation-list a.nav-link-active {
+        color: var(--color-secondary);
     }
 
     #homelab-box {
-        align-items: center;
+        align-items: stretch;
+        margin-top: 30px; /* Spacing from navigation */
+        gap: 0px;
+        width: 100%;
+    }
+
+    #homelab-title {
+        padding: 10px;
+    }
+
+    #homelab-box a {
+        padding: 15px 20px; /* Standard button-like styling */
+        background-color: white;
+        border-top: .5px solid #ddd; border-bottom: .5px solid #ddd;
+        border-left: 1px solid #ddd; border-right: 1px solid #ddd;
+        font-size: 18px;
+        text-align: left;
+        width: 100%; /* Ensure wide buttons */
+        box-sizing: border-box;
+        transition: background-color 0.2s ease, transform 0.2s ease, border-color .2s ease;
+
+        text-decoration: none; 
+        color: initial;
+        font-weight: 500;
+    }
+
+    #homelab-box a:first-of-type {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    #homelab-box a:last-of-type {
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    #homelab-box a:hover,
+    #homelab-box a:focus {
+        background-color: var(--color-primary);
+        color: white;
+        border-color: var(--color-primary);
+        outline: none;
+    }
+
+    /* Overlay effect for content when nav is active */
+    body.nav-active #content {
+        filter: blur(5px);
+        pointer-events: none; /* Prevent interaction with content behind */
+        transition: filter 0.3s ease;
     }
 }
