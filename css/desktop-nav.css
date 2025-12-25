@@ -51,3 +51,15 @@
 #desktop-nav a:active {
     transform: scale(98%);
 }
+
+#desktop-nav .social-icons {
+    opacity: 0;
+    height: 0px;
+    
+    transition: opacity .2s ease, height .2s ease;
+}
+
+#desktop-nav .social-icons.shown {
+    opacity: 1;
+    height: 25px;
+}

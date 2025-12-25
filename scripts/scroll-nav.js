@@ -13,6 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
+        const socialNav = document.getElementById("desktop-nav-social-icons");
+        if (currentSection === "section-header") {
+            socialNav.classList.remove("shown");
+        } else if (!socialNav.classList.contains("shown")) {
+            console.log("welcome to my life"); 
+            socialNav.classList.add("shown");
+        }
+
         navLinks.forEach((link) => {
             link.classList.remove("nav-link-active");
             if (link.getAttribute("href") === `#${currentSection}`) {

@@ -212,3 +212,21 @@ section p {
 .btn:active {
     transform: scale(.95) !important;
 }
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+
+    height: 25px;
+}
+
+.social-icon {
+    height: 100%;
+
+}
+
+.social-icon img {
+    height: 100%;
+}
