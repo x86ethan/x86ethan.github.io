@@ -185,4 +185,12 @@ header {
     nav .btn:hover {
         transform: scale(1);
     }
+
+    #mobile-nav-social-icons {
+    
+        height: 32px;
+        gap: 15px;
+        margin-top: 25px;
+
+    }
 }
