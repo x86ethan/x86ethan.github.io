@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("#navigation-box a");
+    const navLinks = document.querySelectorAll(".navigation-box a");
 
     function updateActiveLink() {
         let currentSection = "";

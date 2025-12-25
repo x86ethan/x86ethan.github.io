@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-#navigation-box {
+.navigation-box {
     display: flex;
     flex-direction: column;
     align-items: flex-end;

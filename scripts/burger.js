@@ -1,6 +1,6 @@
 const burgerMenu = document.getElementById('burger-menu');
 const nav = document.getElementById('mobile-nav');
-const navLinks = document.querySelectorAll('#navigation-list a');
+const navLinks = document.querySelectorAll('.navigation-box a');
 const body = document.body;
 
 burgerMenu.addEventListener('click', () => {

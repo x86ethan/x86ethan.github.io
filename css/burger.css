@@ -55,7 +55,7 @@ header {
     }
 
     #burger-menu.active span:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 7px);
+        transform: translateY(9px) rotate(45deg);
     }
 
     #burger-menu.active span:nth-child(2) {
@@ -63,33 +63,46 @@ header {
     }
 
     #burger-menu.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+        transform: translateY(-9px) rotate(-45deg);
     }
 
-    #navigation-list {
+    .navigation-box {
         list-style: none; /* Remove bullet points */
         padding: 0;
         margin: 20px 0; /* Add margin for spacing */
         display: flex;
         flex-direction: column;
+        align-items: stretch !important;
         width: 100%; /* Make list take full width */ /* Limit overall width for readability */
         border-radius: 15px;
         overflow: hidden;
-        border: 1px solid #ddd;
+        gap: 0 !important;
+        /* border: 1px solid #ddd; */
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    #navigation-list li {
+
+
+    .navigation-box li {
         width: 100%;
         text-align: left;
     }
 
-    #navigation-list a {
+    .navigation-box a:first-of-type {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .navigation-box a:last-of-type {
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .navigation-box a {
         display: block; /* Make the whole area clickable */
         padding: 15px 20px; /* Large touch target */
         background-color: white;
 
         /* Borders */
+        border-left: 1px solid #ddd; border-right: 1px solid #ddd;
         border-top: .5px solid #ddd; border-bottom: .5px solid #ddd; 
         text-decoration: none;
         color: #333;
@@ -98,30 +111,30 @@ header {
         transition: background-color 0.2s ease, transform 0.2s ease, border-color .2s ease;
     }
 
-    #navigation-list a:hover,
-    #navigation-list a:focus {
+    .navigation-box a:hover,
+    .navigation-box a:focus {
         background-color: var(--color-primary);
         border-color: var(--color-primary);
         color: white !important;
         outline: none; /* Remove default focus outline */
     }
 
-    #navigation-list a.nav-link-active {
+    .navigation-box a.nav-link-active {
         color: var(--color-secondary);
     }
 
-    #homelab-box {
+    .homelab-box {
         align-items: stretch;
         margin-top: 30px; /* Spacing from navigation */
         gap: 0px;
         width: 100%;
     }
 
-    #homelab-title {
+    .homelab-title {
         padding: 10px;
     }
 
-    #homelab-box a {
+    .homelab-box a {
         padding: 15px 20px; /* Standard button-like styling */
         background-color: white;
         border-top: .5px solid #ddd; border-bottom: .5px solid #ddd;
@@ -137,16 +150,16 @@ header {
         font-weight: 500;
     }
 
-    #homelab-box a:first-of-type {
+    .homelab-box a:first-of-type {
         border-radius: 15px 15px 0px 0px;
     }
 
-    #homelab-box a:last-of-type {
+    .homelab-box a:last-of-type {
         border-radius: 0px 0px 15px 15px;
     }
 
-    #homelab-box a:hover,
-    #homelab-box a:focus {
+    .homelab-box a:hover,
+    .homelab-box a:focus {
         background-color: var(--color-primary);
         color: white;
         border-color: var(--color-primary);
