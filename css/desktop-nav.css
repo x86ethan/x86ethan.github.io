@@ -42,13 +42,13 @@
     transition: font-weight .3s ease, color .3s ease, transform .3s ease;
 }
 
-#desktop-nav a:hover {
+#desktop-nav > a:hover {
     font-weight: 600;
     color: var(--color-secondary);
     transform: translateX(-5px);
 }
 
-#desktop-nav a:active {
+#desktop-nav > a:active {
     transform: scale(98%);
 }
 
