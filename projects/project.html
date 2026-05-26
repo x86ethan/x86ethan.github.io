@@ -35,6 +35,35 @@
 </head>
 <body>
 
+    <div id="project-content">
+
+
+
+    </div>
+
+    <script type="text/javascript">
+
+        async function loadProject(project) {
+
+            var promise = await fetch(project + ".html");
+            var text = await promise.text();
+
+            // Insert text into the page
+            document.getElementById("project-content").innerHTML = text;
+
+        }
+
+        // Get the URL parameters 
+        var params = new URLSearchParams(window.location.search);
+
+        if (params.has("project")) {
+            // Load project file
+            loadProject(params.get("project"));
+        }
+
+
+    </script>
+
 
     <header>
         <div id="burger-menu" role="button" aria-label="Open navigation menu" aria-expanded="false">
