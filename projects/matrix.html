@@ -1,0 +1,38 @@
+<h1>Installation automatisée d'un serveur Matrix</h1>
+
+Installation complètement automatisée (avec développement d'un outil de provisionning) d'un serveur Matrix complet (Synapse — Element).
+
+<img src="../img/projects/matrix.png" alt="">
+
+<h2>Introduction</h2>
+
+<p>
+    Durant le 3e semestre de BUT Informatique, afin de guider le choix des étudiants avant la grande séparation du tronc commun en deux parcours (A — Développement et B — Déploiement/Systèmes et Réseaux), nous avions à effectuer deux projets afin de nous permettre de choisir au mieux ce qui nous plaisait le plus. <br>
+    C'est personnellement ce projet qui m'intéressait le plus. Le but était simple : installer et documenter la mise en place et la maintenance d'une infrastructure complète d'un serveur de messagerie instantanée Matrix. Le projet se composait d'une base de données PostgreSQL, d'un serveur Synapse, ainsi que d'un front-end web Element. Le tout devait être documenté afin de permettre à n'importe qui — même un étudiant de première année — de lancer l'infrastructure de zéro. Pour ce faire, nous avions à disposition un serveur de bases de données. 
+</p>
+
+<h2>Le défi</h2>
+
+<p>
+    Le gros défi du projet de base était la documentation : comment écrire un guide (des procédures) le plus complet possible, tout en étant le plus accessible possible : permettre de faire en sorte que n'importe qui puisse mettre en route, dépanner, décommissionner, mettre à jour l'infrastructure sans connaissances de base. L'objectif étant surtout la <strong>réduction du "<a href="https://fr.wikipedia.org/wiki/Facteur_d%27autobus">bus factor</a>"</strong>. <br>
+    Pour aller plus loin, une fois le tout terminé, nous avons avec mon binôme voulu pousser le projet jusqu'à l'automatisation complète. Le but était surtout de voir l'infrastructure se déployer automatiquement sous les yeux du client, le tout sans problème, et bien sûr sinon ce n'est pas drôle, sans recourir aux outils modernes (Ansible, Terraform), car les contraintes du projet de base ne nous autorisaient déjà pas spécialement à utiliser le scripting Bash. Même si c'était entièrement un bonus qui ne rentrait pas dans les attendus initiaux, cette contrainte était amusante et engageante.
+</p>
+
+<h2>Ma contribution</h2>
+
+<p>
+    Nous avons travaillé sur le projet à parts égales, surtout sur les procédures et l'installation des services. Je suis assez fier d'avoir apporté des idées intéressantes pour le projet d'automatisation, comme le multiplexage par Tmux sur l'interface finale, ou un dashboard dynamique permettant de voir l'infrastructure se déployer en temps réel. 
+</p>
+
+<h2>Résultats</h2>
+
+<p>
+    Le résultat a été sans appel. Nous voulions maximiser la qualité des attendus initiaux afin d'être irréprochable sur notre bonus, et grâce à notre rigueur, c'est chose faite. Mais surtout, notre plateforme automatisation a été un franc succès, et nous sommes fiers d'avoir pu la faire marcher pendant la soutenance. 
+</p>
+
+<h2>Liens utiles</h2>
+
+<ul>
+    <li><a href="https://gitlab.univ-lille.fr/etu/2025-2026/s303/g-lavogiez-robert">Procédures et rendus officiels sur le Gitlab universitaire</a></li>
+    <li><a href="https://gitlab.univ-lille.fr/baptiste.lavogiez.etu/matrix-scripts">Projet d'automatisation sur le Gitlab universitaire</a></li>
+</ul>
