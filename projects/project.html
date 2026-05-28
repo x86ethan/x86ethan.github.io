@@ -35,10 +35,9 @@
 </head>
 <body>
 
-    <div id="project-content">
-
-
-
+    <div id="content">
+        <div id="project-content">
+        </div>
     </div>
 
     <script type="text/javascript">
@@ -50,6 +49,11 @@
 
             // Insert text into the page
             document.getElementById("project-content").innerHTML = text;
+
+            // Get project main title
+            var title = document.getElementById("project-content").getElementsByTagName("h1")[0]
+
+            document.title = title.innerText + " | Ethan Robert"
 
         }
 

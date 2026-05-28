@@ -42,7 +42,10 @@ body {
     justify-content: flex-start;
 }
 
-
+a {
+    color: var(--color-primary);
+    font-size: 22px;
+}
 
 
 
