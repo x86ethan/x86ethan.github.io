@@ -37,6 +37,32 @@ Un gestionnaire de paquets source-based pour une distribution Linux légère
     La principale leçon était la manière de gérer des dépendances : la solution à ce problème a été un algorithme récursif ajoutant les dépendances dans l'ordre, en privilégiant les paquets sans dépendances. Une autre grande partie du projet étant la maintenabilité de la base de données, ceci a facilement été réglé avec un système de surveillance des sources, qui se chargait de notifier et de mettre automatiquement à jour le lien vers les sources. Une piste d'amélioration pour ce système aujourd'hui serait l'utilisation d'un LLM pour mieux gérer la réécriture des scripts de compilation et les sources — éviter de choisir des sources non pertinentes — et les adapter aux nouvelles versions de paquets.
 </p>
 
+<h2>Compétences en jeu</h2>
+
+<div class="project-skills">
+    <div class="skills-columns">
+        <div class="skills-column">
+            <h3>Hard skills</h3>
+            <ul>
+                <li><strong>Python</strong> — Gestionnaire de paquets écrit entièrement en Python. Léger, fluide, portable. Inspiré par Portage de Gentoo.</li>
+                <li><strong>Algorithme de dépendances</strong> — Récursif, privilégie les paquets sans dépendances. Ordre d'installation garanti sans erreur. C'était un bijou.</li>
+                <li><strong>Linux minimal</strong> — Tout développé et testé dans une VM Linux minimaliste. Condition pour valider la légèreté du gestionnaire.</li>
+                <li><strong>Surveillance de sources</strong> — Système automatique qui notifie les mises à jour, met à jour les liens. Résout le problème de maintenabilité à long terme.</li>
+                <li><strong>Méthodologie en binôme</strong> — Outil de bas niveau intégré à une distribution custom. Itérations courtes pour valider chaque fonctionnalité.</li>
+            </ul>
+        </div>
+        <div class="skills-column">
+            <h3>Soft skills</h3>
+            <ul>
+                <li><strong>Passion personnelle</strong> — Projet personnel hors cadre académique. Développé de A à Z, testé, affiné jusqu'à « qu'il soit exactement ce qu'on cherchait ».</li>
+                <li><strong>Maintenabilité</strong> — Deux développeurs sur une base de paquets évolutive. Fallait concevoir maintenable dès le départ, pas accumuler de dette.</li>
+                <li><strong>Recul critique</strong> — Au final, la distribution n'avait pas de vraie utilité. L'effort ne valait pas l'investissement. C'est dur à admettre, mais c'est honnête.</li>
+                <li><strong>Fierté du travail bien fait</strong> — L'algorithme était élégant, rapide. Voir le gestionnaire tourner en production ? C'était une grande source de fierté.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <h2>Liens utiles</h2>
 
 <ul>

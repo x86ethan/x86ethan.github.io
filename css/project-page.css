@@ -47,3 +47,49 @@ p {
     padding: 0;
     width: 100%;
 }
+
+.project-skills {
+    margin-top: 48px;
+    padding: 0;
+}
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.skills-column h3 {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0 0 16px 0;
+    opacity: 0.8;
+}
+
+.skills-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skills-column ul li {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 140%;
+}
+
+.skills-column ul li strong {
+    font-weight: 500;
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .skills-columns {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
